@@ -8,6 +8,18 @@
 <div id="clock"></div>
 </body>
 <script>
+    var time=document.getElementById("clock");
+    var xhr=new XMLHttpRequest();
+    window.setInterval(function(){
+        xhr.open("GET","/clock",true);
+        xhr.onreadystatechange=function(){
+            time.innerHTML=xhr.responseText
+        };
+        xhr.send();
+    },1000);
+    /**
+
+
     //1. 创建ajax对象
     var xhr = new XMLHttpRequest();
     //2. 指定地址
@@ -19,5 +31,8 @@
     }
     //4.真正向服务器端发起请求，go go go
     xhr.send();
+     *
+     * @type {XMLHttpRequest}
+     */
 </script>
 </html>
