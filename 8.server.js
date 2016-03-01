@@ -10,11 +10,17 @@ var fs = require('fs');
 //每当客户端请求到来的时候，都会执行回调函数
 server.on('request',function(request,response){
     console.log(request.url);
-    //使用node的内置fs模块读取文件的内容
-    var content = fs.readFileSync('./index.html','utf8');
-    //把文件的内容写入响应里面
-    response.write(content);//写入响应
-    response.end();//挂掉电话 结束响应
+    if(request.url == '/index.html'){
+        //使用node的内置fs模块读取文件的内容
+        var content = fs.readFileSync('./index.html','utf8');
+        //把文件的内容写入响应里面
+        response.write(content);//写入响应
+        response.end();//挂掉电话 结束响应
+    }else if(request.url == '/time'){
+        response.write(new Date().toString());//写入响应
+        response.end();//挂掉电话 结束响应
+    }
+
 });
 //在本地监听8080端口
 //国风美唐4号楼416等着大家过来
