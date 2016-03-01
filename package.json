@@ -1,0 +1,26 @@
+{
+  "name": "201509nodestart",
+  "version": "1.0.0",
+  "description": "这是我的一个测试包",
+  "main": "1.async.js",
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhufengnodejs/201509nodestart.git"
+  },
+  "keywords": [
+    "iamzfpx"
+  ],
+  "author": "zfpx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhufengnodejs/201509nodestart/issues"
+  },
+  "homepage": "https://github.com/zhufengnodejs/201509nodestart#readme"
+}
