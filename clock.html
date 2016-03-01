@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<div id="clock"></div>
+</body>
+<script>
+    //1. 创建ajax对象
+    var xhr = new XMLHttpRequest();
+    //2. 指定地址
+    xhr.open('GET','/clock',true);
+    //3. 注册回调函数,当状态变化的时候执行的回调函数
+    xhr.onreadystatechange = function(){
+        //输出服务器端的响应内容
+       console.log(xhr.responseText);
+    }
+    //4.真正向服务器端发起请求，go go go
+    xhr.send();
+</script>
+</html>

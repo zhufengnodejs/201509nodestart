@@ -9,16 +9,15 @@ var server = http.createServer();
 var fs = require('fs');
 //每当客户端请求到来的时候，都会执行回调函数
 server.on('request',function(request,response){
-    console.log(request.url);
-    if(request.url == '/index.html'){
+    if(request.url == '/clock.html'){
         //设置响应头，告诉 浏览器本次响应的内容是什么类型，以便浏览器正确显示此响应内容
         response.setHeader('Content-Type','text/html');
         //使用node的内置fs模块读取文件的内容
-        var content = fs.readFileSync('./index.html','utf8');
+        var content = fs.readFileSync('./clock.html','utf8');
         //把文件的内容写入响应里面
         response.write(content);//写入响应
         response.end();//挂掉电话 结束响应
-    }else if(request.url == '/time'){
+    }else if(request.url == '/clock'){
         response.write(new Date().toString());//写入响应
         response.end();//挂掉电话 结束响应
     }
