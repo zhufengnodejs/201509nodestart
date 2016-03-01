@@ -11,7 +11,7 @@ function mod(){
     function add(a,b){
         return a+b;
     }
-    exports.add = add;
+    ex.add = add;
     ///=================
     return exports;
 }
